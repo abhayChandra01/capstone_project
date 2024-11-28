@@ -1,0 +1,298 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "1234567890",
+      "address": [
+        {
+          "address_id": "1",
+          "address_line": "123 Main Street",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "pincode": "560068"
+        }
+      ],
+      "orders": [
+        {
+          "order_id": "1",
+          "order_date": "27-11-2024 11:18PM",
+          "product_details": {}
+        }
+      ],
+      "cart": [
+        {
+          "cart_id": "1",
+          "product_details": {}
+        }
+      ]
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "role": "admin"
+    },
+    {
+      "id": "3afdcf24-8896-4ecb-bda8-571997041982",
+      "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+      "name": "Vendor 01",
+      "email": "vendor01@gmail.com",
+      "role": "vendor",
+      "password": "12345"
+    },
+    {
+      "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
+      "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+      "name": "Vendor 02",
+      "email": "vendor02@gmail.com",
+      "role": "vendor",
+      "password": "12345"
+    },
+    {
+      "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
+      "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
+      "name": "Vendor 03",
+      "email": "vendor03@gmail.com",
+      "role": "vendor",
+      "password": "12345"
+    },
+    {
+      "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
+      "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
+      "name": "Vendor 04",
+      "email": "vendor04@gmail.com",
+      "role": "vendor",
+      "password": "12345"
+    }
+  ],
+  "products": [
+    {
+      "id": "8473ab49-623b-4551-b37b-c5017202a62b",
+      "product_name": "Glisterine Promise Diamond Ring",
+      "price": "84000",
+      "discount": "20",
+      "stock": "10",
+      "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
+      "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
+      "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+      "category_details": {
+        "id": "2e0a14e4-b200-4a08-8acd-e95bee520476",
+        "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
+        "category_name": "Rings"
+      },
+      "sub_category_details": {
+        "id": "c2053a51-2e3e-44d6-1ev4-8be8549f69c6",
+        "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
+        "sub_category_name": "Engagement",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg"
+      },
+      "vendor_details": {
+        "id": "3afdcf24-8896-4ecb-bda8-571997041982",
+        "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+        "name": "Vendor 01",
+        "email": "vendor01@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_1_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_6_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "095755ff-7378-4497-93cb-eef4e548ea71",
+      "product_name": "Radiant Rivulet Diamond Stud Earrings",
+      "price": "15000",
+      "discount": "8",
+      "stock": "24",
+      "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+      "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+      "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+      "category_details": {
+        "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
+        "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+        "category_name": "Earrings"
+      },
+      "sub_category_details": {
+        "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
+        "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+        "sub_category_name": "Studs",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
+      },
+      "vendor_details": {
+        "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
+        "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+        "name": "Vendor 02",
+        "email": "vendor02@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "984397a0-4bb4-4252-91bb-2624cd2368ee",
+      "product_name": "Scroll and Bead Diamond Jhumkas",
+      "price": "130000",
+      "discount": "10",
+      "stock": "60",
+      "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+      "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
+      "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+      "category_details": {
+        "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
+        "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+        "category_name": "Earrings"
+      },
+      "sub_category_details": {
+        "id": "ce9fffaa-5684-475f-9801-2cbeb552b6b0",
+        "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
+        "sub_category_name": "Jhumkas",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/05cb5d46b065499ca6e50f30724f7e90.jpg"
+      },
+      "vendor_details": {
+        "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
+        "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+        "name": "Vendor 02",
+        "email": "vendor02@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_1_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_5_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "b0f63871-d458-4386-871a-e231ddaf2813",
+      "product_name": "Helix Diamond",
+      "price": "90000",
+      "discount": "10",
+      "stock": "50",
+      "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
+      "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
+      "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+      "category_details": {
+        "id": "791bc3dd-4e56-4ff8-bcc5-72df7ac2a1ea",
+        "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
+        "category_name": "Bracelets & Bangles"
+      },
+      "sub_category_details": {
+        "id": "990371cd-cd82-4168-8f1a-d32756ab14ba",
+        "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
+        "sub_category_name": "Oval Bracelets",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/ef83bc921a13405e8920ad83e0432795.jpg"
+      },
+      "vendor_details": {
+        "id": "3afdcf24-8896-4ecb-bda8-571997041982",
+        "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+        "name": "Vendor 01",
+        "email": "vendor01@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_1_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_6_lar.jpg"
+      ],
+      "status": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
+      "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+      "category_name": "Earrings",
+      "sub_categories": [
+        {
+          "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
+          "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+          "sub_category_name": "Studs",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
+        },
+        {
+          "id": "f6051475-fc68-478c-9c8c-3544414b880f",
+          "sub_category_id": "ee4e4085-b678-42a9-862c-78789a9e7311",
+          "sub_category_name": "Drops",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/c82f3668b7524234a033ca0f1e9198bf.jpg"
+        },
+        {
+          "id": "ce9fffaa-5684-475f-9801-2cbeb552b6b0",
+          "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
+          "sub_category_name": "Jhumkas",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/05cb5d46b065499ca6e50f30724f7e90.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2e0a14e4-b200-4a08-8acd-e95bee520476",
+      "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
+      "category_name": "Rings",
+      "sub_categories": [
+        {
+          "id": "c2053a51-2e3e-44d6-1ev4-8be8549f69c6",
+          "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
+          "sub_category_name": "Engagement",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg"
+        },
+        {
+          "id": "e56d28d5-3746-4f0f-ad81-817a6f4f4f7c",
+          "sub_category_id": "b5625047-b659-4301-afb2-cadc875663ea",
+          "sub_category_name": "Daily Wear",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/bdf62790e1fa4a49bc2cfb3c8b686b49.jpg"
+        },
+        {
+          "id": "fe15715d-6ea1-42b5-8e07-493adbde5b2c",
+          "sub_category_id": "99fa9f09-dfb2-4267-8274-82ed478c8f5d",
+          "sub_category_name": "Platinum",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/f1cecd6ba83142afa27229492f59391d.jpg"
+        }
+      ]
+    },
+    {
+      "id": "791bc3dd-4e56-4ff8-bcc5-72df7ac2a1ea",
+      "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
+      "category_name": "Bracelets & Bangles",
+      "sub_categories": [
+        {
+          "id": "c2053a51-2e3e-44d6-be14-8be8549f12c6",
+          "sub_category_id": "c2053a51-2e3e-44d6-be14-8be8549f69c6",
+          "sub_category_name": "Chain Bracelets",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/05e292e9cf424ec58e05a67bb805355b.jpg"
+        },
+        {
+          "id": "990371cd-cd82-4168-8f1a-d32756ab14ba",
+          "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
+          "sub_category_name": "Oval Bracelets",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/ef83bc921a13405e8920ad83e0432795.jpg"
+        },
+        {
+          "id": "01dbb516-0c20-4fd6-bbdd-015026f81008",
+          "sub_category_id": "857d6266-b0e6-482d-aefc-b59c97f1ba4b",
+          "sub_category_name": "Flexible Bangles",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/f9ad94f888c14b8fb194829426a12a49.png"
+        },
+        {
+          "id": "3accaf76-c332-4c82-a46f-23fadf407dd4",
+          "sub_category_id": "ef309145-2a4c-437b-b64b-5544dc5243fe",
+          "sub_category_name": "Diamond Bangles",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/b1037b1ad67e4199a3f45f49f60241e2.jpg"
+        }
+      ]
+    }
+  ]
+}
