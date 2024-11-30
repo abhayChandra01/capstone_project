@@ -7,6 +7,7 @@ import {
   createVendorAPI,
 } from "../../../../services/admin/Vendor.service";
 import { motion } from "framer-motion";
+import bcrypt from "bcryptjs";
 
 type Props = {
   onClose: () => void;
@@ -20,6 +21,7 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
     email: "",
     role: "vendor",
     password: "",
+    reset_password: false,
   });
 
   const handleChange = (
@@ -47,10 +49,15 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
       return;
     }
 
+    const password = formData?.password || "";
+    const secretRounds = parseInt(process.env.REACT_APP_SECRET_KEY || "10", 10);
+    const hashedPassword = await bcrypt.hash(password, secretRounds);
+
     const newVendorData = {
       ...formData,
       id: uuidv4(),
       vendor_id: uuidv4(),
+      password: hashedPassword,
     };
 
     try {

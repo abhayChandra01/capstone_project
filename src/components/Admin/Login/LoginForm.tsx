@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { adminLoginAPI } from "../../../services/admin/AdminAuth.service";
 import { useNavigate } from "react-router-dom";
 import { navConfig } from "../../../utils/config/navConfig";
+import bcrypt from "bcryptjs";
 
 const LoginForm: React.FC = () => {
   const navigate = useNavigate();
@@ -30,9 +31,17 @@ const LoginForm: React.FC = () => {
     }
 
     try {
-      const user = await adminLoginAPI(email, password);
-      if (user) {
-        console.log(user);
+      const user = await adminLoginAPI(email);
+
+      if (!user) {
+        toast.error("User not found.");
+        return;
+      }
+
+      const fetchedPassword = user?.password || "";
+      const isPasswordValid = await bcrypt.compare(password, fetchedPassword);
+
+      if (isPasswordValid) {
         localStorage.setItem("admin_user", JSON.stringify(user));
         toast.success("Logged in successfully!");
         const firstRoute = navConfig[user.role][0]?.path || "/admin-login";
@@ -107,6 +116,16 @@ const LoginForm: React.FC = () => {
             and settings securely.
           </p>
         </div>
+
+        <p className="mt-2 text-sm text-center">
+          Back to{" "}
+          <span
+            onClick={() => window.close()}
+            className="text-[#8863FB] underline hover:text-[#4F3267] transition-all cursor-pointer"
+          >
+            Home
+          </span>
+        </p>
       </div>
     </div>
   );

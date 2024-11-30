@@ -5,8 +5,10 @@
       "name": "John Doe",
       "email": "john.doe@example.com",
       "phone": "1234567890",
+      "password": "",
       "address": [
         {
+          "id": "1",
           "address_id": "1",
           "address_line": "123 Main Street",
           "city": "Bangalore",
@@ -16,6 +18,7 @@
       ],
       "orders": [
         {
+          "id": "1",
           "order_id": "1",
           "order_date": "27-11-2024 11:18PM",
           "product_details": {}
@@ -23,10 +26,40 @@
       ],
       "cart": [
         {
+          "id": "1",
           "cart_id": "1",
           "product_details": {}
         }
+      ],
+      "wishlist": [
+        {
+          "id": "1",
+          "wishlist_id": "1",
+          "product_details": {}
+        }
       ]
+    },
+    {
+      "id": "8ea2fb55-ac38-427e-8dce-6d44759ca21c",
+      "name": "Abhay",
+      "email": "abhay@gmail.com",
+      "phone": "9876543210",
+      "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
+      "address": [],
+      "orders": [],
+      "cart": [],
+      "wishlist": []
+    },
+    {
+      "id": "4afb9c3e-9996-46c0-b7e2-e75fa349377f",
+      "name": "Sharlaine",
+      "email": "sharlaine@gmail.com",
+      "phone": "956586586",
+      "password": "$2a$12$8thqQua6UJrX9HXlrON5J.oOZrRVHa52.eG1o6vKOsuQooOn8yi0a",
+      "address": [],
+      "orders": [],
+      "cart": [],
+      "wishlist": []
     }
   ],
   "admins": [
@@ -34,7 +67,7 @@
       "id": 1,
       "name": "Admin",
       "email": "admin@gmail.com",
-      "password": "12345",
+      "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
       "role": "admin"
     },
     {
@@ -43,7 +76,8 @@
       "name": "Vendor 01",
       "email": "vendor01@gmail.com",
       "role": "vendor",
-      "password": "12345"
+      "password": "$2a$12$4NZsahdSfHov3qgattiT2.9/yMfHs54odADZMlboczQTIq.jW4TR.",
+      "reset_password": true
     },
     {
       "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
@@ -51,7 +85,8 @@
       "name": "Vendor 02",
       "email": "vendor02@gmail.com",
       "role": "vendor",
-      "password": "12345"
+      "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
+      "reset_password": true
     },
     {
       "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
@@ -59,7 +94,8 @@
       "name": "Vendor 03",
       "email": "vendor03@gmail.com",
       "role": "vendor",
-      "password": "12345"
+      "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
+      "reset_password": true
     },
     {
       "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
@@ -67,7 +103,17 @@
       "name": "Vendor 04",
       "email": "vendor04@gmail.com",
       "role": "vendor",
-      "password": "12345"
+      "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
+      "reset_password": true
+    },
+    {
+      "id": "d16be0dd-0a37-4384-86e4-367d19bd3100",
+      "vendor_id": "c15ede85-8d24-4a95-9595-59eba03fe4e9",
+      "name": "Vendor 05",
+      "email": "vendor05@gmail.com",
+      "role": "vendor",
+      "password": "$2a$12$TlY172sAo4EecPNCyJYmqOcr922FJh3mSoYxDwhrfmL3sWiCvvLYi",
+      "reset_password": true
     }
   ],
   "products": [
@@ -210,6 +256,146 @@
         "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_6_lar.jpg"
       ],
       "status": true
+    },
+    {
+      "id": "018bebaa-0075-4e3d-a3a1-c7431c1375c1",
+      "product_name": "V Loop Solitaire Pendant",
+      "price": "65000",
+      "discount": "10",
+      "stock": "60",
+      "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+      "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
+      "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
+      "category_details": {
+        "id": "fb09b8e0-2ae6-4234-95f8-92d8454424d7",
+        "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+        "category_name": "Solitaires"
+      },
+      "sub_category_details": {
+        "id": "40890795-a08e-46bd-8e1c-5b4af6701583",
+        "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
+        "sub_category_name": "Pendants",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/6da9461dcc60446bbe74760804305c1a.jpg"
+      },
+      "vendor_details": {
+        "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
+        "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
+        "name": "Vendor 03",
+        "email": "vendor03@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP00040-YGP900_1_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP00040-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP00040-YGP900_5_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP00040-YGP900_7_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "17cc36a7-f72c-4f6a-b63d-86343ca370f0",
+      "product_name": "Halo Medallion Solitaire Pendant",
+      "price": "95000",
+      "discount": "12",
+      "stock": "45",
+      "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+      "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
+      "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
+      "category_details": {
+        "id": "fb09b8e0-2ae6-4234-95f8-92d8454424d7",
+        "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+        "category_name": "Solitaires"
+      },
+      "sub_category_details": {
+        "id": "40890795-a08e-46bd-8e1c-5b4af6701583",
+        "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
+        "sub_category_name": "Pendants",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/6da9461dcc60446bbe74760804305c1a.jpg"
+      },
+      "vendor_details": {
+        "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
+        "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
+        "name": "Vendor 03",
+        "email": "vendor03@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP01712-RGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP01712-RGP900_6_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP01712-RGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/P/SP01712-RGP900_1_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "615d3670-1a63-473d-8fc6-03a565ea2cce",
+      "product_name": "Aamira Solitaire Mangalsutra",
+      "price": "76000",
+      "discount": "10",
+      "stock": "98",
+      "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+      "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
+      "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
+      "category_details": {
+        "id": "fb09b8e0-2ae6-4234-95f8-92d8454424d7",
+        "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+        "category_name": "Solitaires"
+      },
+      "sub_category_details": {
+        "id": "572cb0b8-8bfb-4fd2-b2b3-c32e345aca19",
+        "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
+        "sub_category_name": "MangalSutra",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/a2809a04e6274900af2a280280266831.png"
+      },
+      "vendor_details": {
+        "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
+        "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
+        "name": "Vendor 04",
+        "email": "vendor04@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00006-YGP900_6_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00006-YGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00006-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00006-YGP900_1_lar.jpg"
+      ],
+      "status": true
+    },
+    {
+      "id": "a769a0bb-adbc-47ce-9f4b-87e686c8cbfb",
+      "product_name": "Orion Solitaire Mangalsutra",
+      "price": "62000",
+      "discount": "5",
+      "stock": "16",
+      "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+      "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
+      "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
+      "category_details": {
+        "id": "fb09b8e0-2ae6-4234-95f8-92d8454424d7",
+        "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+        "category_name": "Solitaires"
+      },
+      "sub_category_details": {
+        "id": "572cb0b8-8bfb-4fd2-b2b3-c32e345aca19",
+        "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
+        "sub_category_name": "MangalSutra",
+        "sub_category_icon": "https://banner.caratlane.com/live-images/a2809a04e6274900af2a280280266831.png"
+      },
+      "vendor_details": {
+        "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
+        "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
+        "name": "Vendor 04",
+        "email": "vendor04@gmail.com",
+        "role": "vendor"
+      },
+      "images": [
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00076-YGP900_6_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00076-YGP900_4_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00076-YGP900_3_lar.jpg",
+        "https://cdn.caratlane.com/media/catalog/product/S/S/SS00076-YGP900_1_lar.jpg"
+      ],
+      "status": true
     }
   ],
   "categories": [
@@ -291,6 +477,63 @@
           "sub_category_id": "ef309145-2a4c-437b-b64b-5544dc5243fe",
           "sub_category_name": "Diamond Bangles",
           "sub_category_icon": "https://banner.caratlane.com/live-images/b1037b1ad67e4199a3f45f49f60241e2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fb09b8e0-2ae6-4234-95f8-92d8454424d7",
+      "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
+      "category_name": "Solitaires",
+      "sub_categories": [
+        {
+          "id": "40890795-a08e-46bd-8e1c-5b4af6701583",
+          "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
+          "sub_category_name": "Pendants",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/6da9461dcc60446bbe74760804305c1a.jpg"
+        },
+        {
+          "id": "572cb0b8-8bfb-4fd2-b2b3-c32e345aca19",
+          "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
+          "sub_category_name": "MangalSutra",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/a2809a04e6274900af2a280280266831.png"
+        }
+      ]
+    },
+    {
+      "id": "a447da0f-5120-4f86-97bd-af82fe6218a0",
+      "category_id": "724a4cda-1610-470e-b9bf-6e3779757703",
+      "category_name": "Necklaces",
+      "sub_categories": [
+        {
+          "id": "3c7e22f1-ebc0-43dc-a42b-9d624860983c",
+          "sub_category_id": "c4899db6-2fef-4823-8513-1e73ee7005d4",
+          "sub_category_name": "Gold Necklaces",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/3d7f53c12a774a9c9e9461feaff23c6d.jpg"
+        },
+        {
+          "id": "f728afb2-a57e-4f8d-a40e-fa10d315f7c2",
+          "sub_category_id": "38e70d0c-66f4-42eb-a357-4e8a855a8153",
+          "sub_category_name": "Diamond Necklaces",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/3d7f53c12a774a9c9e9461feaff23c6d.jpg"
+        }
+      ]
+    },
+    {
+      "id": "a3be3302-a94b-4a5c-9029-d52aa3454794",
+      "category_id": "8e7989bf-634f-406b-8f29-37eedf12a2d4",
+      "category_name": "More Jewellery",
+      "sub_categories": [
+        {
+          "id": "b7fe5d3c-1a7f-4ee4-ad5d-f3082d3ced0c",
+          "sub_category_id": "3e45df77-80b6-40ad-9576-2f7bf68819da",
+          "sub_category_name": "Kids Bracelet",
+          "sub_category_icon": "https://banner.caratlane.com/live-images/d794dd63a1ec46e8b28cfa85ab70550f.jpg"
+        },
+        {
+          "id": "7229055f-a380-42d8-88db-ed8cfd3ace54",
+          "sub_category_id": "8abd600b-1d61-46f8-bd11-4cd2b2993d98",
+          "sub_category_name": "Silver Bracelets",
+          "sub_category_icon": "https://cdn.caratlane.com/media/static/images/V4/2024/Shaya/10-Oct/Merch/28/CL_Menu_Block_03.jpg"
         }
       ]
     }

@@ -21,6 +21,7 @@ const EditVendorModal: React.FC<Props> = ({ onClose, vendor }) => {
     email: vendor?.email || "",
     role: "vendor",
     password: vendor?.password || "",
+    reset_password: vendor?.reset_password || false,
   });
 
   const handleChange = (

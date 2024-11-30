@@ -4,6 +4,8 @@ export interface Vendor {
   name: string;
   email: string;
   role: "vendor";
+  password?: string;
+  reset_password?: boolean;
 }
 
 export interface createVendor {
@@ -13,4 +15,5 @@ export interface createVendor {
   email: string;
   role: "vendor";
   password?: string;
+  reset_password?: boolean;
 }
