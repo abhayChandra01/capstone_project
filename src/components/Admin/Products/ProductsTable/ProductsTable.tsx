@@ -12,6 +12,7 @@ import {
 import toast from "react-hot-toast";
 import ConfirmationModal from "../../ConfirmationModal/ConfirmationModal";
 import EditProductModal from "../EditProduct/EditProductModal";
+import { useNavigate } from "react-router-dom";
 
 interface ProductsTableProps {
   products: Product[];
@@ -23,6 +24,7 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
   refreshProducts,
 }) => {
   const adminDetails = useAdminDetails();
+  const navigate = useNavigate();
   const [editProductData, setEditProductData] = useState<Product | null>(null);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -163,7 +165,10 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
 
               <td className="px-6 py-4 text-sm text-gray-800">
                 <div className="flex items-center gap-x-2">
-                  <button className="bg-gray-200 rounded-full text-gray-600 grid place-items-center h-7 w-7">
+                  <button
+                    onClick={() => navigate(product.id)}
+                    className="bg-gray-200 rounded-full text-gray-600 grid place-items-center h-7 w-7"
+                  >
                     <FaEye />
                   </button>
 

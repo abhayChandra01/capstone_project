@@ -172,6 +172,8 @@ const AddProductModal: React.FC<Props> = ({ onClose }) => {
     const newProductData = {
       ...formData,
       id: uuidv4(),
+      price: Number(formData.price),
+      discount: Number(formData.discount),
       vendor_details: {
         id: adminDetails?.id ?? "",
         vendor_id: adminDetails?.vendor_id ?? "",

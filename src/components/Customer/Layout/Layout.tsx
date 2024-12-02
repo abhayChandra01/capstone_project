@@ -9,16 +9,25 @@ import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import Loading from "../../Shared/Loading/Loading";
 import { useQuery } from "@tanstack/react-query";
+import NoLogin from "../NoLogin/NoLogin";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const STALE_TIME_FIVE_MINUTES = 5 * 60 * 1000;
+const restrictedRoutes = [
+  "/cart",
+  "/wishlist",
+  "/orders",
+  "/checkout",
+  "/order-placed",
+];
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { loading, setLoading, setCategories, loginModal, registerModal } =
+  const { loading, isLoggedIn, setCategories, loginModal, registerModal } =
     useAppContext();
+  const location = useLocation();
 
   const {
     data: categories,
@@ -33,6 +42,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   if (isError) {
     toast.error("An error occurred! Please try again.");
   }
+
+  const isRestrictedRoute = restrictedRoutes.includes(location.pathname);
 
   useEffect(() => {
     if (categories) {
@@ -53,7 +64,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex flex-col flex-1">
         <Header />
         <main className={`bg-[#F6F3F9] h-[calc(100vh-64px)] overflow-y-auto`}>
-          {children}
+          {isRestrictedRoute && !isLoggedIn ? <NoLogin /> : children}
         </main>
       </div>
     </div>

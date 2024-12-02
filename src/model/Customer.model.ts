@@ -21,13 +21,19 @@ export interface Customer {
         id: string;
         order_id: string;
         order_date: string;
-        product_details: Product;
+        total_amount: number;
+        products_ordered: {
+          id: string;
+          product_count: number;
+          product_details: Product;
+        }[];
       }[]
     | [];
   cart?:
     | {
         id: string;
         cart_id: string;
+        product_count: number;
         product_details: Product;
       }[]
     | [];

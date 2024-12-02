@@ -17,6 +17,8 @@ interface AppContextType {
   registerModal: boolean;
   isLoggedIn: boolean;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+  refreshDetails: boolean;
+  setRefreshDetails: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -35,11 +37,13 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
     customer_user ? true : false
   );
+  const [refreshDetails, setRefreshDetails] = useState<boolean>(false);
 
   const logoutHandler = () => {
     localStorage.removeItem("customer_user");
     toast.success("Logged out successfully!");
     setIsLoggedIn(false);
+    setRefreshDetails(true);
   };
 
   const openLoginModal = () => setLoginModal(true);
@@ -64,6 +68,8 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
         registerModal,
         isLoggedIn,
         setIsLoggedIn,
+        refreshDetails,
+        setRefreshDetails,
       }}
     >
       {children}

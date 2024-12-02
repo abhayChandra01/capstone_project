@@ -111,8 +111,14 @@ const EditProductModal: React.FC<Props> = ({ product, onClose }) => {
       return;
     }
 
+    const newFormData = {
+      ...formData,
+      price: Number(formData.price),
+      discount: Number(formData.discount),
+    };
+
     try {
-      await updateProductAPI(formData.id, formData);
+      await updateProductAPI(formData.id, newFormData);
       toast.success("Product updated successfully!");
       onClose();
     } catch (error) {

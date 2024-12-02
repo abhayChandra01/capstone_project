@@ -46,7 +46,141 @@
       "phone": "9876543210",
       "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
       "address": [],
-      "orders": [],
+      "orders": [
+        {
+          "id": "1e8bce53-d243-4b4a-ae72-9734ca7c6ced",
+          "order_id": "e28984a3-4598-41c9-9833-7952431adb80",
+          "order_date": "2024-12-02T08:16:07.537Z",
+          "total_amount": 215400,
+          "products_ordered": [
+            {
+              "id": "f7d3621a-112f-44df-9854-2d3ef469511f",
+              "product_count": 1,
+              "product_details": {
+                "id": "095755ff-7378-4497-93cb-eef4e548ea71",
+                "product_name": "Radiant Rivulet Diamond Stud Earrings",
+                "price": 15000,
+                "discount": 8,
+                "stock": "24",
+                "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+                "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+                "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+                "category_details": {
+                  "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
+                  "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+                  "category_name": "Earrings"
+                },
+                "sub_category_details": {
+                  "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
+                  "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+                  "sub_category_name": "Studs",
+                  "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
+                },
+                "vendor_details": {
+                  "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
+                  "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+                  "name": "Vendor 02",
+                  "email": "vendor02@gmail.com",
+                  "role": "vendor"
+                },
+                "images": [
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
+                ],
+                "status": true
+              }
+            },
+            {
+              "id": "a94a8ab4-3b5c-4c90-8364-cbb51bb145fa",
+              "product_count": 3,
+              "product_details": {
+                "id": "8473ab49-623b-4551-b37b-c5017202a62b",
+                "product_name": "Glisterine Promise Diamond Ring",
+                "price": 84000,
+                "discount": 20,
+                "stock": "10",
+                "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
+                "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
+                "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+                "category_details": {
+                  "id": "2e0a14e4-b200-4a08-8acd-e95bee520476",
+                  "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
+                  "category_name": "Rings"
+                },
+                "sub_category_details": {
+                  "id": "c2053a51-2e3e-44d6-1ev4-8be8549f69c6",
+                  "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
+                  "sub_category_name": "Engagement",
+                  "sub_category_icon": "https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg"
+                },
+                "vendor_details": {
+                  "id": "3afdcf24-8896-4ecb-bda8-571997041982",
+                  "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
+                  "name": "Vendor 01",
+                  "email": "vendor01@gmail.com",
+                  "role": "vendor"
+                },
+                "images": [
+                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_1_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_3_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_4_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_6_lar.jpg"
+                ],
+                "status": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "c483c643-4104-4b03-8501-2800c8e627e8",
+          "order_id": "c1a71eed-c27b-4ca0-b405-759db0490395",
+          "order_date": "2024-12-02T08:36:10.947Z",
+          "total_amount": 13800,
+          "products_ordered": [
+            {
+              "id": "687558fa-f22e-4086-a809-63a049451216",
+              "product_count": 1,
+              "product_details": {
+                "id": "095755ff-7378-4497-93cb-eef4e548ea71",
+                "product_name": "Radiant Rivulet Diamond Stud Earrings",
+                "price": 15000,
+                "discount": 8,
+                "stock": "24",
+                "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+                "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+                "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+                "category_details": {
+                  "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
+                  "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
+                  "category_name": "Earrings"
+                },
+                "sub_category_details": {
+                  "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
+                  "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+                  "sub_category_name": "Studs",
+                  "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
+                },
+                "vendor_details": {
+                  "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
+                  "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
+                  "name": "Vendor 02",
+                  "email": "vendor02@gmail.com",
+                  "role": "vendor"
+                },
+                "images": [
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
+                ],
+                "status": true
+              }
+            }
+          ]
+        }
+      ],
       "cart": [],
       "wishlist": []
     },
@@ -114,14 +248,23 @@
       "role": "vendor",
       "password": "$2a$12$TlY172sAo4EecPNCyJYmqOcr922FJh3mSoYxDwhrfmL3sWiCvvLYi",
       "reset_password": true
+    },
+    {
+      "id": "00ead924-ed3a-44e3-935b-f0fe54661564",
+      "vendor_id": "a1f40ca1-2045-4e7b-a266-d5ddb91b9ea6",
+      "name": "Vendor 06",
+      "email": "vendor06@gmail.com",
+      "role": "vendor",
+      "password": "$2a$12$gpKTKH7t9/SnMOCCz0rF5eqk/EnQmz/cPD5//22NYBW0pTNoeE78G",
+      "reset_password": true
     }
   ],
   "products": [
     {
       "id": "8473ab49-623b-4551-b37b-c5017202a62b",
       "product_name": "Glisterine Promise Diamond Ring",
-      "price": "84000",
-      "discount": "20",
+      "price": 84000,
+      "discount": 20,
       "stock": "10",
       "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
       "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
@@ -155,8 +298,8 @@
     {
       "id": "095755ff-7378-4497-93cb-eef4e548ea71",
       "product_name": "Radiant Rivulet Diamond Stud Earrings",
-      "price": "15000",
-      "discount": "8",
+      "price": 15000,
+      "discount": 8,
       "stock": "24",
       "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
       "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
@@ -190,8 +333,8 @@
     {
       "id": "984397a0-4bb4-4252-91bb-2624cd2368ee",
       "product_name": "Scroll and Bead Diamond Jhumkas",
-      "price": "130000",
-      "discount": "10",
+      "price": 130000,
+      "discount": 10,
       "stock": "60",
       "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
       "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
@@ -225,8 +368,8 @@
     {
       "id": "b0f63871-d458-4386-871a-e231ddaf2813",
       "product_name": "Helix Diamond",
-      "price": "90000",
-      "discount": "10",
+      "price": 90000,
+      "discount": 10,
       "stock": "50",
       "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
       "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
@@ -260,8 +403,8 @@
     {
       "id": "018bebaa-0075-4e3d-a3a1-c7431c1375c1",
       "product_name": "V Loop Solitaire Pendant",
-      "price": "65000",
-      "discount": "10",
+      "price": 65000,
+      "discount": 10,
       "stock": "60",
       "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
       "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
@@ -295,8 +438,8 @@
     {
       "id": "17cc36a7-f72c-4f6a-b63d-86343ca370f0",
       "product_name": "Halo Medallion Solitaire Pendant",
-      "price": "95000",
-      "discount": "12",
+      "price": 95000,
+      "discount": 12,
       "stock": "45",
       "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
       "sub_category_id": "a1a4d9f6-d393-406e-af81-bae8c8288550",
@@ -330,8 +473,8 @@
     {
       "id": "615d3670-1a63-473d-8fc6-03a565ea2cce",
       "product_name": "Aamira Solitaire Mangalsutra",
-      "price": "76000",
-      "discount": "10",
+      "price": 76000,
+      "discount": 10,
       "stock": "98",
       "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
       "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",
@@ -365,8 +508,8 @@
     {
       "id": "a769a0bb-adbc-47ce-9f4b-87e686c8cbfb",
       "product_name": "Orion Solitaire Mangalsutra",
-      "price": "62000",
-      "discount": "5",
+      "price": 62000,
+      "discount": 5,
       "stock": "16",
       "category_id": "722dd06d-46ed-4aa2-bfb9-ed1a6adcd405",
       "sub_category_id": "92f06f35-57d9-4432-9b9e-9df491b56478",

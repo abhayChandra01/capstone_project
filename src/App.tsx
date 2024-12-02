@@ -14,14 +14,22 @@ import Categories from "./pages/admin/categories/Categories";
 import Vendors from "./pages/admin/vendors/Vendors";
 import { AppProvider } from "./context/AppProvider";
 import ViewProducts from "./pages/customer/products/ViewProducts";
+import ViewProductDetails from "./pages/customer/products/details/ViewProductDetails";
+import Wishlist from "./pages/customer/wishlist/Wishlist";
+import Cart from "./pages/customer/cart/Cart";
+import Orders from "./pages/customer/orders/Orders";
+import Checkout from "./pages/customer/checkout/Checkout";
+import OrderPlaced from "./pages/customer/placed/OrderPlaced";
+import AdminViewProducts from "./pages/admin/view/AdminViewProducts";
 
 function App() {
   return (
     <Router>
       <AppProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
+          {/* Customer Routes */}
 
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route
             path="/home"
             element={
@@ -38,6 +46,56 @@ function App() {
               </Layout>
             }
           />
+          <Route
+            path="/products/:id"
+            element={
+              <Layout>
+                <ViewProductDetails />
+              </Layout>
+            }
+          />
+          <Route
+            path="/wishlist"
+            element={
+              <Layout>
+                <Wishlist />
+              </Layout>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Layout>
+                <Cart />
+              </Layout>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <Layout>
+                <Orders />
+              </Layout>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Layout>
+                <Checkout />
+              </Layout>
+            }
+          />
+          <Route
+            path="/order-placed"
+            element={
+              <Layout>
+                <OrderPlaced />
+              </Layout>
+            }
+          />
+
+          {/* Admin/Vendor Routes */}
 
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route
@@ -45,6 +103,14 @@ function App() {
             element={
               <ProtectedRoute allowedRoles={["admin", "vendor"]}>
                 <Products />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/:role/products/:id"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "vendor"]}>
+                <AdminViewProducts />
               </ProtectedRoute>
             }
           />
@@ -64,10 +130,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-
-          {/* <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/products" element={<Products />} /> */}
         </Routes>
       </AppProvider>
     </Router>
