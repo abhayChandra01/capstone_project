@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Category } from "../../../model/Category.model";
 import { useAppContext } from "../../../context/AppProvider";
 import { useNavigate } from "react-router-dom";
 import { TbCategory } from "react-icons/tb";

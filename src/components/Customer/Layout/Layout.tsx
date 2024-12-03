@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import Header from "../Header/Header";
 import { useAppContext } from "../../../context/AppProvider";

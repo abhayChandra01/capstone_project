@@ -1,5 +1,4 @@
 import React from "react";
-import { AdminRole } from "../../../utils/config/navConfig";
 import useAdminDetails from "../../../hooks/useAdminDetails";
 
 const AdminHeader: React.FC = () => {

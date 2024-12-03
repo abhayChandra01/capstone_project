@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useAdminContext } from "../../../context/AdminProvider";
-import useAdminDetails from "../../../hooks/useAdminDetails";
 import { Product } from "../../../model/Product.model";
 import { getProductByIdAPI } from "../../../services/admin/Product.service";
 import { useNavigate, useParams } from "react-router-dom";
@@ -12,7 +11,6 @@ export default function AdminViewProducts() {
   const navigate = useNavigate();
   const { setLoading } = useAdminContext();
   const { id } = useParams();
-  const adminDetails = useAdminDetails();
 
   const [productDetails, setProductDetails] = useState<Product | null>(null);
 

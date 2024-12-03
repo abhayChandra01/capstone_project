@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
 import { Category } from "../model/Category.model";
 import toast from "react-hot-toast";
 
@@ -28,7 +27,6 @@ interface AppProviderProps {
 }
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
-  const navigate = useNavigate();
   const customer_user = localStorage.getItem("customer_user");
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);

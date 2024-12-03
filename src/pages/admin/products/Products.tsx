@@ -7,7 +7,6 @@ import {
 } from "../../../services/admin/Product.service";
 import toast from "react-hot-toast";
 import AddProductModal from "../../../components/Admin/Products/AddProduct/AddProductModal";
-import { AdminRole } from "../../../utils/config/navConfig";
 import useAdminDetails from "../../../hooks/useAdminDetails";
 import { Vendor } from "../../../model/Vendor.model";
 import { getVendorsAPI } from "../../../services/admin/Vendor.service";

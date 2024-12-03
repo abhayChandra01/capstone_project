@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AdminUser } from "../model/AdminUser.model";
-import { Vendor } from "../model/Vendor.model";
 
 const useAdminDetails = (): AdminUser | null => {
   const [adminDetails, setAdminDetails] = useState<AdminUser | null>(null);

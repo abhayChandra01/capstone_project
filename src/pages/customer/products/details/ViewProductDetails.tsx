@@ -41,7 +41,7 @@ export default function ViewProductDetails() {
   }
 
   const isInWishlist = customerDetails?.wishlist?.some(
-    (wishlistItem) => wishlistItem.product_details?.id == id
+    (wishlistItem) => wishlistItem.product_details?.id === id
   );
 
   const calculateDiscountedPrice = (

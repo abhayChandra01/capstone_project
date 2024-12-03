@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Homepage from "./pages/customer/homepage/Homepage";
 import Products from "./pages/admin/products/Products";
-import AdminLayout from "./components/Admin/Layout/AdminLayout";
 import Layout from "./components/Customer/Layout/Layout";
 import AdminLogin from "./pages/admin/login/AdminLogin";
 import ProtectedRoute from "./protected-route/ProtectedRoute";

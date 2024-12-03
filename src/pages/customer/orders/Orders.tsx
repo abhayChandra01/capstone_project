@@ -1,17 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useCustomerDetails from "../../../hooks/useCustomerDetails";
-import { useAppContext } from "../../../context/AppProvider";
 import { useQuery } from "@tanstack/react-query";
 import { getOrdersAPI } from "../../../services/customer/Products.service";
 import Loading from "../../../components/Shared/Loading/Loading";
+import toast from "react-hot-toast";
 
 const STALE_TIME_FIVE_MINUTES = 5 * 60 * 1000;
 
 const Orders: React.FC = () => {
   const navigate = useNavigate();
   const customerDetails = useCustomerDetails();
-  const { setRefreshDetails } = useAppContext();
 
   const {
     data: userData,
@@ -22,6 +21,10 @@ const Orders: React.FC = () => {
     queryFn: getOrdersAPI,
     staleTime: STALE_TIME_FIVE_MINUTES,
   });
+
+  if (isError) {
+    toast.error("An error occurred! Please try again.");
+  }
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-100 rounded-lg">
@@ -49,6 +52,15 @@ const Orders: React.FC = () => {
                   {order?.total_amount
                     ? new Intl.NumberFormat("en-IN").format(order?.total_amount)
                     : `-`}
+                </span>
+              </div>
+              <div className="text-base mt-2 flex flex-col">
+                <div>Address :</div>
+                <span className="text-gray-700 text-[14px]">
+                  {order?.address_details?.address_line} <br />{" "}
+                  {order?.address_details?.city} |{" "}
+                  {order?.address_details?.state} |{" "}
+                  {order?.address_details?.pincode}
                 </span>
               </div>
               <div className="mt-2 overflow-hidden">

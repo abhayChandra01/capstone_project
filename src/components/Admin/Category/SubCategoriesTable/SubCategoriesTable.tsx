@@ -1,6 +1,5 @@
 import React from "react";
 import { SubCategory } from "../../../../model/Category.model";
-import { MdDelete, MdModeEdit } from "react-icons/md";
 
 interface SubCategoriesTableProps {
   subCategories: SubCategory[];

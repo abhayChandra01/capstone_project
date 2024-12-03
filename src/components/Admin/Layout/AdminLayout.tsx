@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import { Toaster } from "react-hot-toast";
 import AdminSidebar from "../Sidebar/AdminSidebar";

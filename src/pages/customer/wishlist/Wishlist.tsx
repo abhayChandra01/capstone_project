@@ -1,4 +1,4 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import {
   addToWishlistAPI,
@@ -78,6 +78,7 @@ const Wishlist: React.FC = () => {
           <img
             src="https://cdni.iconscout.com/illustration/premium/thumb/sorry-item-not-found-illustration-download-in-svg-png-gif-file-formats--available-product-tokostore-pack-e-commerce-shopping-illustrations-2809510.png"
             className="w-full max-w-md"
+            alt={`image-no-wishlist-found`}
           />
           No items available!
         </div>

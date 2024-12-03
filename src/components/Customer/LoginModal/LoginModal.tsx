@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 import { IoMdClose } from "react-icons/io";
 import { customerLoginAPI } from "../../../services/customer/CustomerAuth.service";
 import bcrypt from "bcryptjs";
-import useCustomerDetails from "../../../hooks/useCustomerDetails";
 
 const LoginModal: React.FC = () => {
   const { closeLoginModal, openRegisterModal, setIsLoggedIn } = useAppContext();

@@ -1,7 +1,7 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { navConfig, AdminRole } from "../../../utils/config/navConfig";
+import { navConfig } from "../../../utils/config/navConfig";
 import { useAdminContext } from "../../../context/AdminProvider";
 import useAdminDetails from "../../../hooks/useAdminDetails";
 

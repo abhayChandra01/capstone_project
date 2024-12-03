@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import Loading from "../../../components/Shared/Loading/Loading";
@@ -9,8 +9,8 @@ import {
 import { useAppContext } from "../../../context/AppProvider";
 import useCustomerDetails from "../../../hooks/useCustomerDetails";
 import { v4 as uuidv4 } from "uuid";
-import { Product } from "../../../model/Product.model";
 import { useNavigate } from "react-router-dom";
+import AddAddressModal from "../../../components/Customer/AddAddressModal/AddAddressModal";
 
 const STALE_TIME_FIVE_MINUTES = 5 * 60 * 1000;
 
@@ -18,6 +18,15 @@ const Checkout: React.FC = () => {
   const navigate = useNavigate();
   const customerDetails = useCustomerDetails();
   const { setRefreshDetails } = useAppContext();
+  const [addAddressModal, setAddressModalOpen] = useState<boolean>(false);
+  const [selectedAddress, setSelectedAddress] = useState<{
+    id: string;
+    address_id: string;
+    address_line: string;
+    city: string;
+    state: string;
+    pincode: number;
+  } | null>(null);
 
   const {
     data: userData,
@@ -51,6 +60,11 @@ const Checkout: React.FC = () => {
   };
 
   const handlePlaceOrder = async () => {
+    if (!selectedAddress) {
+      toast.error("Please select an address.");
+      return;
+    }
+
     if (!customerDetails || !customerDetails.cart?.length) {
       toast.error("Your cart is empty!");
       return;
@@ -72,6 +86,7 @@ const Checkout: React.FC = () => {
       order_id: uuidv4(),
       order_date: new Date().toISOString(),
       total_amount: total_amount,
+      address_details: selectedAddress,
       products_ordered: cart.map((item) => ({
         id: uuidv4(),
         product_count: item.product_count,
@@ -106,6 +121,10 @@ const Checkout: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-100 rounded-lg">
       <h2 className="text-3xl font-bold text-center mb-6">Checkout</h2>
+
+      {addAddressModal ? (
+        <AddAddressModal onClose={() => setAddressModalOpen(false)} />
+      ) : null}
 
       {isLoading ? (
         <Loading fullscreen={true} />
@@ -169,6 +188,54 @@ const Checkout: React.FC = () => {
             ))}
           </div>
 
+          <div className="mb-6 p-4">
+            {customerDetails?.address?.length ? (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 mb-4 gap-5">
+                  {customerDetails.address.map((address) => (
+                    <label
+                      key={address.id}
+                      className={`flex items-start gap-3 cursor-pointer rounded-lg border p-4 ${
+                        selectedAddress?.id === address.id
+                          ? `border-purple-500`
+                          : `border-gray-300`
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="address"
+                        value={address.id}
+                        checked={selectedAddress?.id === address.id}
+                        onChange={() => setSelectedAddress(address)}
+                        className="mt-1"
+                      />
+                      <div className="text-sm">
+                        <p className="font-semibold">{address.address_line}</p>
+                        <p>{`${address.city}, ${address.state}, ${address.pincode}`}</p>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+                <span
+                  onClick={() => setAddressModalOpen(true)}
+                  className="cursor-pointer text-purple-600 hover:underline w-fit"
+                >
+                  Add a new one.
+                </span>
+              </div>
+            ) : (
+              <div>
+                No addresses saved!{" "}
+                <span
+                  onClick={() => setAddressModalOpen(true)}
+                  className="cursor-pointer text-purple-600 hover:underline"
+                >
+                  Add a new one.
+                </span>
+              </div>
+            )}
+          </div>
+
           <div className="mt-6 p-4 border-t">
             <div className="flex justify-between items-center text-lg">
               <span className="font-bold">Grand Total:</span>
@@ -178,8 +245,9 @@ const Checkout: React.FC = () => {
             </div>
             <div className="w-full mt-4 flex justify-center">
               <button
+                disabled={!selectedAddress}
                 onClick={handlePlaceOrder}
-                className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-3 rounded-lg text-lg shadow-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 max-w-md mx-auto"
+                className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-3 rounded-lg text-lg shadow-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 max-w-md disabled:opacity-65"
               >
                 Place Order
               </button>

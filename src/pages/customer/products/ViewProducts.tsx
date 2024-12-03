@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { getProductsAPI } from "../../../services/customer/Products.service";
 import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { motion } from "framer-motion";
 import Loading from "../../../components/Shared/Loading/Loading";
 import { useAppContext } from "../../../context/AppProvider";
 import { IoIosArrowForward } from "react-icons/io";
@@ -239,6 +238,7 @@ export default function ViewProducts() {
             <img
               src="https://cdni.iconscout.com/illustration/premium/thumb/sorry-item-not-found-illustration-download-in-svg-png-gif-file-formats--available-product-tokostore-pack-e-commerce-shopping-illustrations-2809510.png"
               className="w-full max-w-lg"
+              alt="no-image-product"
             />
             No products available!
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import useCustomerDetails from "../../../hooks/useCustomerDetails";
 import { useAppContext } from "../../../context/AppProvider";
 import {

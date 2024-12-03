@@ -22,6 +22,14 @@ export interface Customer {
         order_id: string;
         order_date: string;
         total_amount: number;
+        address_details: {
+          id: string;
+          address_id: string;
+          address_line: string;
+          city: string;
+          state: string;
+          pincode: number;
+        };
         products_ordered: {
           id: string;
           product_count: number;

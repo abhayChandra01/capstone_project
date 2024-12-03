@@ -144,3 +144,13 @@ export const getOrdersAPI = async (): Promise<Customer> => {
   const response = await axios.get<Customer>(`${API_URL}/customers/${id}`);
   return response.data;
 };
+
+export const updateAddressAPI = async (
+  customerId: string,
+  updatedAddresses: any[]
+) => {
+  const response = await axios.patch(`${API_URL}/customers/${customerId}`, {
+    address: updatedAddresses,
+  });
+  return response.data;
+};

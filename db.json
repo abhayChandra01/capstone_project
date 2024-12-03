@@ -45,25 +45,50 @@
       "email": "abhay@gmail.com",
       "phone": "9876543210",
       "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
-      "address": [],
+      "address": [
+        {
+          "id": "3a417c98-7d8d-4cab-9a0a-448f669ab128",
+          "address_id": "e4e93903-f6b7-401f-8b2b-89d6615c766b",
+          "address_line": "SomeAddressLine",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "pincode": "560068"
+        },
+        {
+          "id": "d8a1cccc-d763-4721-b20f-9a88b0566cb2",
+          "address_id": "d4d2a7ba-ea33-4b7f-840b-e65dfa3d69d4",
+          "address_line": "SomeAddressLine2",
+          "city": "Bareilly",
+          "state": "Uttar Pradesh",
+          "pincode": "242001"
+        }
+      ],
       "orders": [
         {
-          "id": "1e8bce53-d243-4b4a-ae72-9734ca7c6ced",
-          "order_id": "e28984a3-4598-41c9-9833-7952431adb80",
-          "order_date": "2024-12-02T08:16:07.537Z",
-          "total_amount": 215400,
+          "id": "fc692e13-cbfd-47d5-ac62-6e45abef0305",
+          "order_id": "ff3c953e-b5b8-4564-8cb0-36ed9ff16c2b",
+          "order_date": "2024-12-03T05:32:52.690Z",
+          "total_amount": 117000,
+          "address_details": {
+            "id": "3a417c98-7d8d-4cab-9a0a-448f669ab128",
+            "address_id": "e4e93903-f6b7-401f-8b2b-89d6615c766b",
+            "address_line": "SomeAddressLine",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "pincode": "560068"
+          },
           "products_ordered": [
             {
-              "id": "f7d3621a-112f-44df-9854-2d3ef469511f",
+              "id": "1cdbcad0-a79a-4216-9385-88061137b504",
               "product_count": 1,
               "product_details": {
-                "id": "095755ff-7378-4497-93cb-eef4e548ea71",
-                "product_name": "Radiant Rivulet Diamond Stud Earrings",
-                "price": 15000,
-                "discount": 8,
-                "stock": "24",
+                "id": "984397a0-4bb4-4252-91bb-2624cd2368ee",
+                "product_name": "Scroll and Bead Diamond Jhumkas",
+                "price": 130000,
+                "discount": 10,
+                "stock": "60",
                 "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
-                "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
+                "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
                 "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
                 "category_details": {
                   "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
@@ -71,10 +96,10 @@
                   "category_name": "Earrings"
                 },
                 "sub_category_details": {
-                  "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
-                  "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
-                  "sub_category_name": "Studs",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
+                  "id": "ce9fffaa-5684-475f-9801-2cbeb552b6b0",
+                  "sub_category_id": "d6786600-515a-429d-97cb-c4debcfb7266",
+                  "sub_category_name": "Jhumkas",
+                  "sub_category_icon": "https://banner.caratlane.com/live-images/05cb5d46b065499ca6e50f30724f7e90.jpg"
                 },
                 "vendor_details": {
                   "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
@@ -84,49 +109,10 @@
                   "role": "vendor"
                 },
                 "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
-                ],
-                "status": true
-              }
-            },
-            {
-              "id": "a94a8ab4-3b5c-4c90-8364-cbb51bb145fa",
-              "product_count": 3,
-              "product_details": {
-                "id": "8473ab49-623b-4551-b37b-c5017202a62b",
-                "product_name": "Glisterine Promise Diamond Ring",
-                "price": 84000,
-                "discount": 20,
-                "stock": "10",
-                "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
-                "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
-                "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                "category_details": {
-                  "id": "2e0a14e4-b200-4a08-8acd-e95bee520476",
-                  "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
-                  "category_name": "Rings"
-                },
-                "sub_category_details": {
-                  "id": "c2053a51-2e3e-44d6-1ev4-8be8549f69c6",
-                  "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
-                  "sub_category_name": "Engagement",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg"
-                },
-                "vendor_details": {
-                  "id": "3afdcf24-8896-4ecb-bda8-571997041982",
-                  "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                  "name": "Vendor 01",
-                  "email": "vendor01@gmail.com",
-                  "role": "vendor"
-                },
-                "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_4_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_6_lar.jpg"
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_1_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_3_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_4_lar.jpg",
+                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE04230-YGP900_5_lar.jpg"
                 ],
                 "status": true
               }
@@ -134,14 +120,22 @@
           ]
         },
         {
-          "id": "c483c643-4104-4b03-8501-2800c8e627e8",
-          "order_id": "c1a71eed-c27b-4ca0-b405-759db0490395",
-          "order_date": "2024-12-02T08:36:10.947Z",
-          "total_amount": 13800,
+          "id": "72c680d7-a6db-47e3-82e0-3d6eae6e3d2f",
+          "order_id": "985412c5-ba60-40f0-afca-54d1b97cb44d",
+          "order_date": "2024-12-03T05:57:07.724Z",
+          "total_amount": 27600,
+          "address_details": {
+            "id": "3a417c98-7d8d-4cab-9a0a-448f669ab128",
+            "address_id": "e4e93903-f6b7-401f-8b2b-89d6615c766b",
+            "address_line": "SomeAddressLine",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "pincode": "560068"
+          },
           "products_ordered": [
             {
-              "id": "687558fa-f22e-4086-a809-63a049451216",
-              "product_count": 1,
+              "id": "50d97e4b-b068-4210-b90c-3766eb4af8e9",
+              "product_count": 2,
               "product_details": {
                 "id": "095755ff-7378-4497-93cb-eef4e548ea71",
                 "product_name": "Radiant Rivulet Diamond Stud Earrings",

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { createVendor } from "../../../../model/Vendor.model";
 import toast from "react-hot-toast";
-import { v4 as uuidv4 } from "uuid";
-import {
-  createVendorAPI,
-  updateVendorAPI,
-} from "../../../../services/admin/Vendor.service";
+import { updateVendorAPI } from "../../../../services/admin/Vendor.service";
 import { motion } from "framer-motion";
 
 type Props = {

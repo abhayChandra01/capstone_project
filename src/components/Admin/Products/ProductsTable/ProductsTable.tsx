@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { createVendor, Vendor } from "../../../../model/Vendor.model";
 import { MdDelete, MdModeEdit } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { Product } from "../../../../model/Product.model";

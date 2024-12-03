@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FaHeart, FaShoppingCart, FaUser, FaUserPlus } from "react-icons/fa";
+import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CategorySection from "../CategorySection/CategorySection";
 import { useAppContext } from "../../../context/AppProvider";
 import useCustomerDetails from "../../../hooks/useCustomerDetails";
-import { IoIosListBox, IoIosLogIn } from "react-icons/io";
+import { IoIosListBox } from "react-icons/io";
 import { SlLogout } from "react-icons/sl";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
@@ -39,6 +39,7 @@ const Header: React.FC = () => {
           src={logo}
           onClick={() => navigate("/")}
           className="w-20 cursor-pointer"
+          alt="site-logo"
         />
 
         <CategorySection />
