@@ -1,5 +1,5 @@
 import React from "react";
-import { createVendor, Vendor } from "../../../../model/Vendor.model";
+import { createVendor, Vendor } from "../../../model/Vendor.model";
 import { MdDelete, MdModeEdit } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 
@@ -48,9 +48,6 @@ const VendorsTable: React.FC<VendorsTableProps> = ({
 
               <td className="px-6 py-4 text-sm text-gray-800">
                 <div className="flex items-center gap-x-2">
-                  <button className="bg-gray-200 rounded-full text-gray-600 grid place-items-center h-7 w-7">
-                    <FaEye />
-                  </button>
                   <button
                     onClick={() => onEdit(vendor)}
                     className="bg-yellow-100 rounded-full text-yellow-600 grid place-items-center h-7 w-7"

@@ -19,7 +19,7 @@ import Cart from "./pages/customer/cart/Cart";
 import Orders from "./pages/customer/orders/Orders";
 import Checkout from "./pages/customer/checkout/Checkout";
 import OrderPlaced from "./pages/customer/placed/OrderPlaced";
-import AdminViewProducts from "./pages/admin/view/AdminViewProducts";
+import AdminViewProducts from "./pages/admin/products/view/AdminViewProducts";
 
 function App() {
   return (

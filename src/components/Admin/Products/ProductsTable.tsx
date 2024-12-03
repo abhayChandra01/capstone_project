@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { MdDelete, MdModeEdit } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
-import { Product } from "../../../../model/Product.model";
-import useAdminDetails from "../../../../hooks/useAdminDetails";
-import StatusToggle from "../../StatusToggle/StatusToggle";
+import { Product } from "../../../model/Product.model";
+import useAdminDetails from "../../../hooks/useAdminDetails";
+import StatusToggle from "../StatusToggle/StatusToggle";
 import {
   deleteProductAPI,
   updateProductAPI,
-} from "../../../../services/admin/Product.service";
+} from "../../../services/admin/Product.service";
 import toast from "react-hot-toast";
-import ConfirmationModal from "../../ConfirmationModal/ConfirmationModal";
-import EditProductModal from "../EditProduct/EditProductModal";
+import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
+import EditProductModal from "./EditProductModal";
 import { useNavigate } from "react-router-dom";
 
 interface ProductsTableProps {

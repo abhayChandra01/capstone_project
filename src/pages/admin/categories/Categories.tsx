@@ -3,8 +3,8 @@ import { useAdminContext } from "../../../context/AdminProvider";
 import { Category } from "../../../model/Category.model";
 import { getCategoriesAPI } from "../../../services/admin/Category.service";
 import toast from "react-hot-toast";
-import CategoriesTable from "../../../components/Admin/Category/CategoriesTable/CategoriesTable";
-import AddCategoryModal from "../../../components/Admin/Category/AddCategory/AddCategoryModal";
+import CategoriesTable from "../../../components/Admin/Category/CategoriesTable";
+import AddCategoryModal from "../../../components/Admin/Category/AddCategoryModal";
 
 const Vendors: React.FC = () => {
   const { setLoading } = useAdminContext();

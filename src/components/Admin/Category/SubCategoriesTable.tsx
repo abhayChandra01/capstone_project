@@ -1,5 +1,5 @@
 import React from "react";
-import { SubCategory } from "../../../../model/Category.model";
+import { SubCategory } from "../../../model/Category.model";
 
 interface SubCategoriesTableProps {
   subCategories: SubCategory[];

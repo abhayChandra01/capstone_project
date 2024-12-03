@@ -4,7 +4,9 @@ import useCustomerDetails from "../../../hooks/useCustomerDetails";
 import { useAppContext } from "../../../context/AppProvider";
 import {
   getCartAPI,
+  getProductStockAPI,
   updateCartAPI,
+  updateProductStockAPI,
 } from "../../../services/customer/Products.service";
 import toast from "react-hot-toast";
 import Loading from "../../../components/Shared/Loading/Loading";
@@ -28,18 +30,39 @@ const Cart: React.FC = () => {
     staleTime: STALE_TIME_FIVE_MINUTES,
   });
 
-  const handleUpdateQuantity = async (itemId: string, newCount: number) => {
+  const handleUpdateQuantity = async (
+    itemId: string,
+    newCount: number,
+    productId: string,
+    key: string
+  ) => {
     if (newCount < 1) {
       toast.error("Product count cannot be less than 1.");
       return;
     }
 
     try {
+      const productResponse = await getProductStockAPI(productId);
+      const product = productResponse;
+
+      if (key === "add") {
+        if (!product || product?.stock === 0) {
+          toast.error(`Insufficient stock!.`);
+          return;
+        }
+      }
       const cart = userData?.cart || [];
 
       const updatedCart = cart?.map((item) =>
         item.id === itemId ? { ...item, product_count: newCount } : item
       );
+
+      const updatedStock =
+        key === "add"
+          ? parseInt(product?.stock || 0) - 1
+          : parseInt(product?.stock || 0) + 1;
+
+      await updateProductStockAPI(product?.id || "", Math.max(0, updatedStock));
 
       const user = await updateCartAPI(customerDetails?.id || "", updatedCart);
 
@@ -53,11 +76,21 @@ const Cart: React.FC = () => {
     }
   };
 
-  const handleRemoveItem = async (itemId: string) => {
+  const handleRemoveItem = async (
+    itemId: string,
+    productId: string,
+    count: number
+  ) => {
     try {
       const cart = userData?.cart || [];
 
       const updatedCart = cart.filter((item) => item.id !== itemId);
+
+      const productResponse = await getProductStockAPI(productId);
+      const product = productResponse;
+      const updatedStock = parseInt(product?.stock) + count;
+
+      await updateProductStockAPI(product?.id || "", Math.max(0, updatedStock));
 
       const user = await updateCartAPI(customerDetails?.id || "", updatedCart);
 
@@ -176,7 +209,12 @@ const Cart: React.FC = () => {
                 <div className="flex items-center space-x-2 mt-4">
                   <button
                     onClick={() =>
-                      handleUpdateQuantity(item.id, item.product_count - 1)
+                      handleUpdateQuantity(
+                        item.id,
+                        item.product_count - 1,
+                        item?.product_details?.id,
+                        "subtract"
+                      )
                     }
                     className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
                   >
@@ -185,17 +223,27 @@ const Cart: React.FC = () => {
                   <span className="text-center w-8">{item.product_count}</span>
                   <button
                     onClick={() =>
-                      handleUpdateQuantity(item.id, item.product_count + 1)
+                      handleUpdateQuantity(
+                        item.id,
+                        item.product_count + 1,
+                        item?.product_details?.id,
+                        "add"
+                      )
                     }
                     className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
                   >
                     +
                   </button>
                   <button
-                    onClick={() => handleRemoveItem(item.id)}
-                    className="ml-4 bg-red-100 p-2 rounded-lg text-sm text-red-600 hover:text-red-800 inline-flex items-center gap-2"
+                    onClick={() =>
+                      handleRemoveItem(
+                        item.id,
+                        item?.product_details?.id,
+                        item?.product_count
+                      )
+                    }
+                    className="ml-4 bg-red-100 p-2 rounded-lg text-sm text-red-600 hover:text-red-800"
                   >
-                    Remove
                     <FaTrashAlt size={18} />
                   </button>
                 </div>

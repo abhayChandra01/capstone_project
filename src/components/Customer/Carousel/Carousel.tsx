@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   "https://cdn.caratlane.com/media/static/images/V4/2024/CL/11_NOV/Banner/GoldenFriday/01/Desktop.webp",
@@ -8,6 +9,7 @@ const images = [
 ];
 
 const Carousel: React.FC = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -20,7 +22,10 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="relative w-screen h-[calc(100vh-95px)] overflow-hidden">
-      <div className="absolute top-0 left-0 flex w-full h-[calc(100vh-95px)]">
+      <div
+        className="absolute top-0 left-0 flex w-full h-[calc(100vh-95px)] cursor-pointer"
+        onClick={() => navigate("/products")}
+      >
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}

@@ -4,11 +4,11 @@ import {
   deleteVendorAPI,
   getVendorsAPI,
 } from "../../../services/admin/Vendor.service";
-import VendorsTable from "../../../components/Admin/Vendors/VendorsTable/VendorsTable";
+import VendorsTable from "../../../components/Admin/Vendors/VendorsTable";
 import { useAdminContext } from "../../../context/AdminProvider";
 import toast from "react-hot-toast";
-import AddVendorModal from "../../../components/Admin/Vendors/AddVendor/AddVendorModal";
-import EditVendorModal from "../../../components/Admin/Vendors/EditVendor/EditVendorModal";
+import AddVendorModal from "../../../components/Admin/Vendors/AddVendorModal";
+import EditVendorModal from "../../../components/Admin/Vendors/EditVendorModal";
 import ConfirmationModal from "../../../components/Admin/ConfirmationModal/ConfirmationModal";
 
 const Vendors: React.FC = () => {

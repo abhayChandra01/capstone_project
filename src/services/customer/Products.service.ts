@@ -138,6 +138,21 @@ export const placeOrderAPI = async (
   return response.data;
 };
 
+export const updateProductStockAPI = async (
+  productId: string,
+  updatedStock: number
+) => {
+  const response = await axios.patch(`${API_URL}/products/${productId}`, {
+    stock: updatedStock,
+  });
+  return response.data;
+};
+
+export const getProductStockAPI = async (productId: string) => {
+  const response = await axios.get(`${API_URL}/products/${productId}`);
+  return response.data;
+};
+
 export const getOrdersAPI = async (): Promise<Customer> => {
   const id = JSON.parse(localStorage.getItem("customer_user") || "")?.id;
 

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { v4 as uuidv4 } from "uuid";
-import { Product } from "../../../../model/Product.model";
-import { updateProductAPI } from "../../../../services/admin/Product.service";
+import { Product } from "../../../model/Product.model";
+import { updateProductAPI } from "../../../services/admin/Product.service";
 
 type Props = {
   product: Product | null;

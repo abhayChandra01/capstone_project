@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useAdminContext } from "../../../context/AdminProvider";
-import { Product } from "../../../model/Product.model";
-import { getProductByIdAPI } from "../../../services/admin/Product.service";
+import { useAdminContext } from "../../../../context/AdminProvider";
+import { Product } from "../../../../model/Product.model";
+import { getProductByIdAPI } from "../../../../services/admin/Product.service";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";

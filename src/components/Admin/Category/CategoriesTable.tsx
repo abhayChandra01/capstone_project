@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Category } from "../../../../model/Category.model";
+import { Category } from "../../../model/Category.model";
 import {
   MdDelete,
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdModeEdit,
 } from "react-icons/md";
-import SubCategoriesTable from "../SubCategoriesTable/SubCategoriesTable";
-import EditCategoryModal from "../EditCategory/EditCategoryModal";
+import SubCategoriesTable from "./SubCategoriesTable";
+import EditCategoryModal from "./EditCategoryModal";
 import { AnimatePresence, motion } from "framer-motion";
-import { deleteCategoryAPI } from "../../../../services/admin/Category.service";
+import { deleteCategoryAPI } from "../../../services/admin/Category.service";
 import toast from "react-hot-toast";
-import ConfirmationModal from "../../ConfirmationModal/ConfirmationModal";
+import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 
 interface CategoriesTableProps {
   categories: Category[];

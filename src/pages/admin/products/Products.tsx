@@ -6,11 +6,11 @@ import {
   getTotalProductsCountAPI,
 } from "../../../services/admin/Product.service";
 import toast from "react-hot-toast";
-import AddProductModal from "../../../components/Admin/Products/AddProduct/AddProductModal";
+import AddProductModal from "../../../components/Admin/Products/AddProductModal";
 import useAdminDetails from "../../../hooks/useAdminDetails";
 import { Vendor } from "../../../model/Vendor.model";
 import { getVendorsAPI } from "../../../services/admin/Vendor.service";
-import ProductsTable from "../../../components/Admin/Products/ProductsTable/ProductsTable";
+import ProductsTable from "../../../components/Admin/Products/ProductsTable";
 import { Category, SubCategory } from "../../../model/Category.model";
 import { getCategoriesAPI } from "../../../services/admin/Category.service";
 

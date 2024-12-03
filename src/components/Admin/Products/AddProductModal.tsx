@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { v4 as uuidv4 } from "uuid";
-import { Product } from "../../../../model/Product.model";
-import { Category, SubCategory } from "../../../../model/Category.model";
-import { getCategoriesAPI } from "../../../../services/admin/Category.service";
-import useAdminDetails from "../../../../hooks/useAdminDetails";
-import { createProductAPI } from "../../../../services/admin/Product.service";
+import { Product } from "../../../model/Product.model";
+import { Category, SubCategory } from "../../../model/Category.model";
+import { getCategoriesAPI } from "../../../services/admin/Category.service";
+import useAdminDetails from "../../../hooks/useAdminDetails";
+import { createProductAPI } from "../../../services/admin/Product.service";
 
 type Props = {
   onClose: () => void;

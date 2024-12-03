@@ -1,27 +1,23 @@
 import React, { useState } from "react";
-import { createVendor } from "../../../../model/Vendor.model";
+import { createVendor } from "../../../model/Vendor.model";
 import toast from "react-hot-toast";
-import { v4 as uuidv4 } from "uuid";
-import {
-  checkEmailExistsAPI,
-  createVendorAPI,
-} from "../../../../services/admin/Vendor.service";
+import { updateVendorAPI } from "../../../services/admin/Vendor.service";
 import { motion } from "framer-motion";
-import bcrypt from "bcryptjs";
 
 type Props = {
   onClose: () => void;
+  vendor: createVendor | null;
 };
 
-const AddVendorModal: React.FC<Props> = ({ onClose }) => {
+const EditVendorModal: React.FC<Props> = ({ onClose, vendor }) => {
   const [formData, setFormData] = useState<createVendor>({
-    id: "",
-    vendor_id: "",
-    name: "",
-    email: "",
+    id: vendor?.id || "",
+    vendor_id: vendor?.vendor_id || "",
+    name: vendor?.name || "",
+    email: vendor?.email || "",
     role: "vendor",
-    password: "",
-    reset_password: false,
+    password: vendor?.password || "",
+    reset_password: vendor?.reset_password || false,
   });
 
   const handleChange = (
@@ -43,26 +39,13 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
       return;
     }
 
-    const emailExists = await checkEmailExistsAPI(formData.email);
-    if (emailExists) {
-      toast.error("Email is already in use. Please choose another.");
-      return;
-    }
-
-    const password = formData?.password || "";
-    const secretRounds = parseInt(process.env.REACT_APP_SECRET_KEY || "10", 10);
-    const hashedPassword = await bcrypt.hash(password, secretRounds);
-
     const newVendorData = {
       ...formData,
-      id: uuidv4(),
-      vendor_id: uuidv4(),
-      password: hashedPassword,
     };
 
     try {
-      await createVendorAPI(newVendorData);
-      toast.success("Vendor created successfully!");
+      await updateVendorAPI(formData?.id, newVendorData);
+      toast.success("Vendor updated successfully!");
       onClose();
     } catch {
       toast.error("An error occurred. Please try again.");
@@ -78,7 +61,7 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
         transition={{ duration: 0.3 }}
         className="bg-white rounded-lg p-6 w-[450px]"
       >
-        <h2 className="text-xl font-bold mb-4">Add Vendor</h2>
+        <h2 className="text-xl font-bold mb-4">Update Vendor</h2>
         <form onSubmit={handleSubmit}>
           <div className="w-full mb-4">
             <label
@@ -89,10 +72,10 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
             </label>
             <input
               name="name"
+              autoFocus
               value={formData.name}
               onChange={handleChange}
               required
-              autoFocus
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F3267] focus:border-[#4F3267]"
               placeholder="Enter name"
             />
@@ -105,30 +88,14 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
               Vendor Email
             </label>
             <input
+              readOnly
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F3267] focus:border-[#4F3267]"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F3267] focus:border-[#4F3267] read-only:opacity-60"
               placeholder="Enter email"
-            />
-          </div>
-          <div className="w-full mb-4">
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Vendor Password
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F3267] focus:border-[#4F3267]"
-              placeholder="Enter password"
             />
           </div>
 
@@ -144,7 +111,7 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
               type="submit"
               className="w-fit bg-[#4F3267] text-sm text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#8863FB] focus:outline-none focus:ring-2 focus:ring-[#4F3267]"
             >
-              Create
+              Update
             </button>
           </div>
         </form>
@@ -153,4 +120,4 @@ const AddVendorModal: React.FC<Props> = ({ onClose }) => {
   );
 };
 
-export default AddVendorModal;
+export default EditVendorModal;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import toast from "react-hot-toast";
-import { Category } from "../../../../model/Category.model";
-import { createCategoryAPI } from "../../../../services/admin/Category.service";
+import { Category } from "../../../model/Category.model";
+import { createCategoryAPI } from "../../../services/admin/Category.service";
 import { motion } from "framer-motion";
 
 type Props = {

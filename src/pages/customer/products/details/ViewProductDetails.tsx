@@ -4,6 +4,7 @@ import {
   addToCartAPI,
   addToWishlistAPI,
   getProductByIdAPI,
+  updateProductStockAPI,
 } from "../../../../services/customer/Products.service";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
@@ -172,6 +173,9 @@ export default function ViewProductDetails() {
     }
 
     try {
+      const updatedStock = Number(product?.stock) - 1 || 0;
+      await updateProductStockAPI(product?.id || "", Math.max(0, updatedStock));
+
       const user = await addToCartAPI(customerDetails?.id || "", updatedCart);
       toast.success("Cart updated successfully!");
       localStorage.setItem("customer_user", JSON.stringify(user));
@@ -270,13 +274,22 @@ export default function ViewProductDetails() {
           </div>
 
           <div
+            className={`${
+              Number(product?.stock) ? `text-green-600` : `text-red-600`
+            }`}
+          >
+            {Number(product?.stock) ? `In stock` : `Out of stock!`}
+          </div>
+
+          <div
             className={`mt-4 flex gap-2 ${
               isInWishlist ? `flex-col` : `flex-row items-center`
             }`}
           >
             <button
+              disabled={Number(product?.stock) ? false : true}
               onClick={handleAddToCart}
-              className="w-full bg-gradient-to-r from-[#4F3267] to-[#8863FB] text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#8863FB] focus:outline-none focus:ring-2 focus:ring-[#4F3267] max-w-md"
+              className="w-full bg-gradient-to-r from-[#4F3267] to-[#8863FB] text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#8863FB] focus:outline-none focus:ring-2 focus:ring-[#4F3267] max-w-md disabled:opacity-70"
             >
               Add to cart
             </button>
