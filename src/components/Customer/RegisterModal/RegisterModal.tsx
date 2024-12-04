@@ -50,6 +50,11 @@ const RegisterModal: React.FC = () => {
       return false;
     }
 
+    if (String(phone).length !== 10) {
+      toast.error("Phone number must be exactly 10 digits.");
+      return false;
+    }
+
     if (password !== confirmPassword) {
       toast.error("Passwords do not match.");
       return false;

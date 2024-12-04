@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
       <div className="text-lg font-semibold h-16 px-2">Menu</div>
       <ul className="">
         {navItems.map((item) => (
-          <Link to={item.path}>
+          <Link key={item.path} to={item.path}>
             <li
               key={item.path}
               className="hover:bg-[#8863FB] hover:bg-opacity-10 hover:text-gray-300 cursor-pointer p-2 rounded-lg"

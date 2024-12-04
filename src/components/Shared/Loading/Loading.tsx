@@ -12,9 +12,11 @@ const Loading: React.FC<LoadingProps> = ({ fullscreen }) => {
 
   return (
     <div
+      data-testid="loading-container"
       className={`fixed bg-black bg-opacity-15 ${containerSize} flex items-center justify-center z-50`}
     >
       <div
+        data-testid="loading-spinner"
         className={`${loadingSize} border-t-4 border-b-4 border-gray-300 border-t-purple-500 border-b-purple-500 rounded-full animate-spin`}
       ></div>
     </div>

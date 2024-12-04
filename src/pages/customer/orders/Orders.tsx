@@ -35,62 +35,68 @@ const Orders: React.FC = () => {
         <p>No orders placed yet.</p>
       ) : (
         <div className="flex flex-col gap-5">
-          {userData?.orders?.map((order) => (
-            <div key={order.id} className="border-b bg-white p-4 rounded-lg">
-              <div className="flex md:flex-row flex-col justify-between md:items-center">
-                <div className="text-sm font-semibold">
-                  Order ID: {order.order_id}
+          {userData?.orders
+            ?.slice()
+            ?.reverse()
+            .map((order) => (
+              <div key={order.id} className="border-b bg-white p-4 rounded-lg">
+                <div className="flex md:flex-row flex-col justify-between md:items-center">
+                  <div className="text-sm font-semibold">
+                    Order ID: {order.order_id}
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    Order Date:{" "}
+                    {new Date(order.order_date).toLocaleDateString()}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-500">
-                  Order Date: {new Date(order.order_date).toLocaleDateString()}
+                <div className="text-base mt-2">
+                  Total Amount :{" "}
+                  <span className="text-green-700">
+                    ₹
+                    {order?.total_amount
+                      ? new Intl.NumberFormat("en-IN").format(
+                          order?.total_amount
+                        )
+                      : `-`}
+                  </span>
                 </div>
-              </div>
-              <div className="text-base mt-2">
-                Total Amount :{" "}
-                <span className="text-green-700">
-                  ₹
-                  {order?.total_amount
-                    ? new Intl.NumberFormat("en-IN").format(order?.total_amount)
-                    : `-`}
-                </span>
-              </div>
-              <div className="text-base mt-2 flex flex-col">
-                <div>Address :</div>
-                <span className="text-gray-700 text-[14px]">
-                  {order?.address_details?.address_line} <br />{" "}
-                  {order?.address_details?.city} |{" "}
-                  {order?.address_details?.state} |{" "}
-                  {order?.address_details?.pincode}
-                </span>
-              </div>
-              <div className="mt-2 overflow-hidden">
-                <h4 className="font-medium text-sm">Products Ordered:</h4>
-                {order.products_ordered.map((product, index) => (
-                  <div
-                    key={product.id}
-                    onClick={() =>
-                      navigate(`/products/${product.product_details.id}`)
-                    }
-                    className="flex items-center space-x-4 mt-2 cursor-pointer hover:scale-[101%] transition-all ease-in-out duration-150"
-                  >
-                    <img
-                      src={product.product_details.images[0]}
-                      alt={product.product_details.product_name}
-                      className="w-20 h-20 object-cover rounded"
-                    />
-                    <div>
-                      <div className="font-semibold">
-                        {product.product_details.product_name}
-                      </div>
-                      <div className="text-sm">
-                        Quantity: {product.product_count}
+                <div className="text-base mt-2 flex flex-col">
+                  <div>Address :</div>
+                  <span className="text-gray-700 text-[14px]">
+                    {order?.address_details?.address_line} <br />{" "}
+                    {order?.address_details?.city} |{" "}
+                    {order?.address_details?.state} |{" "}
+                    {order?.address_details?.pincode}
+                  </span>
+                </div>
+                <div className="mt-2 overflow-hidden">
+                  <h4 className="font-medium text-sm">Products Ordered:</h4>
+                  {order.products_ordered.map((product, index) => (
+                    <div
+                      key={product.id}
+                      onClick={() =>
+                        navigate(`/products/${product.product_details.id}`)
+                      }
+                      className="flex items-center space-x-4 mt-2 cursor-pointer hover:scale-[101%] transition-all ease-in-out duration-150"
+                    >
+                      <img
+                        src={product.product_details.images[0]}
+                        alt={product.product_details.product_name}
+                        className="w-20 h-20 object-cover rounded"
+                      />
+                      <div>
+                        <div className="font-semibold">
+                          {product.product_details.product_name}
+                        </div>
+                        <div className="text-sm">
+                          Quantity: {product.product_count}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       )}
     </div>

@@ -5,6 +5,7 @@ import { SlLogout } from "react-icons/sl";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../../context/AppProvider";
+import useCustomerDetails from "../../../hooks/useCustomerDetails";
 
 interface HeaderMenuProps {
   isMenuOpen: boolean;
@@ -21,11 +22,10 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const customerDetails = useNavigate();
+  const customerDetails = useCustomerDetails();
   const { openLoginModal, openRegisterModal, logoutHandler, isLoggedIn } =
     useAppContext();
 
-  // Close menu on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -38,7 +38,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({
     };
   }, [setIsMenuOpen]);
 
-  if (!isMenuOpen) return null; // If menu is not open, return null (no rendering)
+  if (!isMenuOpen) return null;
 
   return (
     <motion.div

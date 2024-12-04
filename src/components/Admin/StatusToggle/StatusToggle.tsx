@@ -10,16 +10,19 @@ const StatusToggle: React.FC<StatusToggleProps> = ({ isActive, onToggle }) => {
     <label className="inline-flex relative items-center cursor-pointer">
       <input
         type="checkbox"
+        name="checkbox-status"
         checked={isActive}
         onChange={onToggle}
         className="sr-only"
       />
       <div
+        data-testid="checkbox-circle"
         className={`w-11 h-6 rounded-full ${
           isActive ? "bg-green-500" : "bg-gray-300"
         }`}
       ></div>
       <div
+        data-testid="checkbox-dot"
         className={`dot absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition ${
           isActive ? "translate-x-5" : "translate-x-0"
         }`}

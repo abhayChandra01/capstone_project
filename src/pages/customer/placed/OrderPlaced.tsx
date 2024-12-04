@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function OrderPlaced() {
+const OrderPlaced: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -66,4 +66,6 @@ export default function OrderPlaced() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default OrderPlaced;

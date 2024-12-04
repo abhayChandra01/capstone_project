@@ -38,7 +38,10 @@ const CategorySection: React.FC = () => {
 
   return (
     <div className="h-full w-full">
-      <div className="relative hidden md:flex items-center md:gap-5 xl:gap-10 h-full">
+      <div
+        data-testid="categorySectionDesktop"
+        className="relative hidden md:flex items-center md:gap-5 xl:gap-10 h-full"
+      >
         {categories?.map((category) => (
           <div
             key={category?.id}
@@ -100,6 +103,7 @@ const CategorySection: React.FC = () => {
         ))}
       </div>
       <div
+        data-testid="categorySectionMobile"
         className="md:hidden h-full w-full flex items-center gap-2 justify-end cursor-pointer z-10"
         onClick={() => setIsSlideOutMenuOpen(!isSlideOutMenuOpen)}
       >
