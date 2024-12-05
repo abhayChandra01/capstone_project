@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import AdminHeader from "./AdminHeader";
 import useAdminDetails from "../../../hooks/useAdminDetails";
 
-// Mocking the custom hook
 jest.mock("../../../hooks/useAdminDetails");
 
 describe("AdminHeader", () => {
