@@ -24,118 +24,7 @@
           "pincode": "242001"
         }
       ],
-      "orders": [
-        {
-          "id": "b9de036b-7c83-4177-808d-12200061deba",
-          "order_id": "bc69cb6c-f829-4476-9113-8dcdb3b9cc57",
-          "order_date": "2024-12-04T03:46:29.213Z",
-          "total_amount": 13800,
-          "address_details": {
-            "id": "3a417c98-7d8d-4cab-9a0a-448f669ab128",
-            "address_id": "e4e93903-f6b7-401f-8b2b-89d6615c766b",
-            "address_line": "SomeAddressLine",
-            "city": "Bangalore",
-            "state": "Karnataka",
-            "pincode": "560068"
-          },
-          "products_ordered": [
-            {
-              "id": "f4065e80-6787-4d87-8dcf-957955dbd6bd",
-              "product_count": 1,
-              "product_details": {
-                "id": "095755ff-7378-4497-93cb-eef4e548ea71",
-                "product_name": "Radiant Rivulet Diamond Stud Earrings",
-                "price": 15000,
-                "discount": 8,
-                "stock": "100",
-                "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
-                "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
-                "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-                "category_details": {
-                  "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
-                  "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
-                  "category_name": "Earrings"
-                },
-                "sub_category_details": {
-                  "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
-                  "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
-                  "sub_category_name": "Studs",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
-                },
-                "vendor_details": {
-                  "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
-                  "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-                  "name": "Vendor 02",
-                  "email": "vendor02@gmail.com",
-                  "role": "vendor"
-                },
-                "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
-                ],
-                "status": true
-              }
-            }
-          ]
-        },
-        {
-          "id": "0a66a7e7-3063-444b-a70b-b5e7b098916a",
-          "order_id": "fbe3a2e3-96be-4bb4-a48a-a83ba79e4e55",
-          "order_date": "2024-12-04T03:46:45.490Z",
-          "total_amount": 81000,
-          "address_details": {
-            "id": "3a417c98-7d8d-4cab-9a0a-448f669ab128",
-            "address_id": "e4e93903-f6b7-401f-8b2b-89d6615c766b",
-            "address_line": "SomeAddressLine",
-            "city": "Bangalore",
-            "state": "Karnataka",
-            "pincode": "560068"
-          },
-          "products_ordered": [
-            {
-              "id": "a545cefa-cce0-45cf-8846-9eb59fb87bbc",
-              "product_count": 1,
-              "product_details": {
-                "id": "b0f63871-d458-4386-871a-e231ddaf2813",
-                "product_name": "Helix Diamond",
-                "price": 90000,
-                "discount": 10,
-                "stock": 49,
-                "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
-                "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
-                "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                "category_details": {
-                  "id": "791bc3dd-4e56-4ff8-bcc5-72df7ac2a1ea",
-                  "category_id": "2b48b625-f5c6-41b1-961c-755ac587b3c4",
-                  "category_name": "Bracelets & Bangles"
-                },
-                "sub_category_details": {
-                  "id": "990371cd-cd82-4168-8f1a-d32756ab14ba",
-                  "sub_category_id": "a12721d4-5a1a-4bd0-bf11-743de0d0213d",
-                  "sub_category_name": "Oval Bracelets",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/ef83bc921a13405e8920ad83e0432795.jpg"
-                },
-                "vendor_details": {
-                  "id": "3afdcf24-8896-4ecb-bda8-571997041982",
-                  "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                  "name": "Vendor 01",
-                  "email": "vendor01@gmail.com",
-                  "role": "vendor"
-                },
-                "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_4_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/T/JT00625-YGP900_6_lar.jpg"
-                ],
-                "status": true
-              }
-            }
-          ]
-        }
-      ],
+      "orders": [],
       "cart": [],
       "wishlist": []
     },
@@ -166,102 +55,7 @@
           "pincode": "560068"
         }
       ],
-      "orders": [
-        {
-          "id": "a94c9dd2-9801-402d-bb25-52217b0dc08e",
-          "order_id": "b1612745-0f30-4b55-afec-e8cc09f421b5",
-          "order_date": "2024-12-04T05:47:09.405Z",
-          "total_amount": 215400,
-          "address_details": {
-            "id": "de42adef-3654-46f6-a228-47cbf399df52",
-            "address_id": "5ed56b94-99c6-4a26-8c78-5ac45a7ced61",
-            "address_line": "4th street",
-            "city": "Bangalore",
-            "state": "Karnataka",
-            "pincode": "560068"
-          },
-          "products_ordered": [
-            {
-              "id": "9e5ef59c-4553-4800-9053-fe40ad50f7b5",
-              "product_count": 1,
-              "product_details": {
-                "id": "095755ff-7378-4497-93cb-eef4e548ea71",
-                "product_name": "Radiant Rivulet Diamond Stud Earrings",
-                "price": 15000,
-                "discount": 8,
-                "stock": 99,
-                "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
-                "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
-                "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-                "category_details": {
-                  "id": "20df3ca8-e2ca-49f9-ae4c-dd424c576c39",
-                  "category_id": "53c0e1f7-1c8b-48ee-9796-807c5775d0a9",
-                  "category_name": "Earrings"
-                },
-                "sub_category_details": {
-                  "id": "c2053a51-2e3e-44d6-be14-8be4569f69c6",
-                  "sub_category_id": "d3ad8ee0-ac6e-4c4a-855e-8b686d9a4be9",
-                  "sub_category_name": "Studs",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/c4b1660f99f34e688274b930a5a70d8f.jpg"
-                },
-                "vendor_details": {
-                  "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
-                  "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-                  "name": "Vendor 02",
-                  "email": "vendor02@gmail.com",
-                  "role": "vendor"
-                },
-                "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_6_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/J/E/JE09644-1YP900_4_lar.jpg"
-                ],
-                "status": true
-              }
-            },
-            {
-              "id": "8883b561-93a3-4b70-8c27-8fecb4ea4660",
-              "product_count": 3,
-              "product_details": {
-                "id": "8473ab49-623b-4551-b37b-c5017202a62b",
-                "product_name": "Glisterine Promise Diamond Ring",
-                "price": 84000,
-                "discount": 20,
-                "stock": "10",
-                "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
-                "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
-                "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                "category_details": {
-                  "id": "2e0a14e4-b200-4a08-8acd-e95bee520476",
-                  "category_id": "17a39baf-0105-430c-99d5-36e009a45cf6",
-                  "category_name": "Rings"
-                },
-                "sub_category_details": {
-                  "id": "c2053a51-2e3e-44d6-1ev4-8be8549f69c6",
-                  "sub_category_id": "13ca4cd8-7c30-43fb-9b9b-44b391c178b1",
-                  "sub_category_name": "Engagement",
-                  "sub_category_icon": "https://banner.caratlane.com/live-images/3e52030aaf3c4b59b34f7825aaefd475.jpg"
-                },
-                "vendor_details": {
-                  "id": "3afdcf24-8896-4ecb-bda8-571997041982",
-                  "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-                  "name": "Vendor 01",
-                  "email": "vendor01@gmail.com",
-                  "role": "vendor"
-                },
-                "images": [
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_1_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_3_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_4_lar.jpg",
-                  "https://cdn.caratlane.com/media/catalog/product/S/R/SR03705-YGP900_6_lar.jpg"
-                ],
-                "status": true
-              }
-            }
-          ]
-        }
-      ],
+      "orders": [],
       "cart": [],
       "wishlist": []
     }
@@ -277,7 +71,7 @@
     {
       "id": "3afdcf24-8896-4ecb-bda8-571997041982",
       "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-      "name": "Vendor 01",
+      "name": "Caratlane",
       "email": "vendor01@gmail.com",
       "role": "vendor",
       "password": "$2a$12$4NZsahdSfHov3qgattiT2.9/yMfHs54odADZMlboczQTIq.jW4TR.",
@@ -286,7 +80,7 @@
     {
       "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
       "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-      "name": "Vendor 02",
+      "name": "Tanishq",
       "email": "vendor02@gmail.com",
       "role": "vendor",
       "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
@@ -295,7 +89,7 @@
     {
       "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
       "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
-      "name": "Vendor 03",
+      "name": "Kalyan Jewellers",
       "email": "vendor03@gmail.com",
       "role": "vendor",
       "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
@@ -304,7 +98,7 @@
     {
       "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
       "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
-      "name": "Vendor 04",
+      "name": "Tiffany Co.",
       "email": "vendor04@gmail.com",
       "role": "vendor",
       "password": "$2a$12$nL4DDrmDAyTXplobKhFlkuarjMv8tZbKOQ/EriTnPm1RMmlp3eR8i",
@@ -313,7 +107,7 @@
     {
       "id": "d16be0dd-0a37-4384-86e4-367d19bd3100",
       "vendor_id": "c15ede85-8d24-4a95-9595-59eba03fe4e9",
-      "name": "Vendor 05",
+      "name": "Swarovski",
       "email": "vendor05@gmail.com",
       "role": "vendor",
       "password": "$2a$12$TlY172sAo4EecPNCyJYmqOcr922FJh3mSoYxDwhrfmL3sWiCvvLYi",
@@ -322,7 +116,7 @@
     {
       "id": "00ead924-ed3a-44e3-935b-f0fe54661564",
       "vendor_id": "a1f40ca1-2045-4e7b-a266-d5ddb91b9ea6",
-      "name": "Vendor 06",
+      "name": "Bluestone",
       "email": "vendor06@gmail.com",
       "role": "vendor",
       "password": "$2a$12$gpKTKH7t9/SnMOCCz0rF5eqk/EnQmz/cPD5//22NYBW0pTNoeE78G",
@@ -331,7 +125,7 @@
     {
       "id": "32cd2631-7ea4-4501-9cb4-97e005f43b1b",
       "vendor_id": "0cdae09f-9530-46c3-ad0a-ac1c2d21b77f",
-      "name": "Vendor 07",
+      "name": "Malabar Gold",
       "email": "vendor07@gmail.com",
       "role": "vendor",
       "password": "$2a$12$7CsTeJF783cgaRrVM87Mlul5g4Pv0LOsmlhFPDqAdbS40kyugSZy2",
@@ -362,7 +156,7 @@
       "vendor_details": {
         "id": "3afdcf24-8896-4ecb-bda8-571997041982",
         "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-        "name": "Vendor 01",
+        "name": "Caratlane",
         "email": "vendor01@gmail.com",
         "role": "vendor"
       },
@@ -397,7 +191,7 @@
       "vendor_details": {
         "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
         "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-        "name": "Vendor 02",
+        "name": "Tanishq",
         "email": "vendor02@gmail.com",
         "role": "vendor"
       },
@@ -432,7 +226,7 @@
       "vendor_details": {
         "id": "fada2e5d-9dba-44ec-ad48-dfb2ad1b5ac6",
         "vendor_id": "195ac497-b8ed-405b-98d1-0be9d5766679",
-        "name": "Vendor 02",
+        "name": "Tanishq",
         "email": "vendor02@gmail.com",
         "role": "vendor"
       },
@@ -467,7 +261,7 @@
       "vendor_details": {
         "id": "3afdcf24-8896-4ecb-bda8-571997041982",
         "vendor_id": "c9685d4d-0231-420e-a67f-46fe0c058edd",
-        "name": "Vendor 01",
+        "name": "Caratlane",
         "email": "vendor01@gmail.com",
         "role": "vendor"
       },
@@ -502,7 +296,7 @@
       "vendor_details": {
         "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
         "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
-        "name": "Vendor 03",
+        "name": "Kalyan Jewellers",
         "email": "vendor03@gmail.com",
         "role": "vendor"
       },
@@ -537,7 +331,7 @@
       "vendor_details": {
         "id": "fad0f1f7-3b21-4d93-ade4-26149bc2afc1",
         "vendor_id": "86622e8f-9b6e-4ead-8c24-cba108ea0c8d",
-        "name": "Vendor 03",
+        "name": "Kalyan Jewellers",
         "email": "vendor03@gmail.com",
         "role": "vendor"
       },
@@ -572,7 +366,7 @@
       "vendor_details": {
         "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
         "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
-        "name": "Vendor 04",
+        "name": "Tiffany Co.",
         "email": "vendor04@gmail.com",
         "role": "vendor"
       },
@@ -607,7 +401,7 @@
       "vendor_details": {
         "id": "641b4482-e9ad-4b3f-aebf-2b96dd5cdd46",
         "vendor_id": "ac9a6665-82ca-4873-ba2d-a7cdd4c7d350",
-        "name": "Vendor 04",
+        "name": "Tiffany Co.",
         "email": "vendor04@gmail.com",
         "role": "vendor"
       },
@@ -642,7 +436,7 @@
       "vendor_details": {
         "id": "32cd2631-7ea4-4501-9cb4-97e005f43b1b",
         "vendor_id": "0cdae09f-9530-46c3-ad0a-ac1c2d21b77f",
-        "name": "Vendor 07",
+        "name": "Malabar Gold",
         "email": "vendor07@gmail.com",
         "role": "vendor"
       },
